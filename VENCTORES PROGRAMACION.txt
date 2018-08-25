@@ -1,0 +1,101 @@
+1. 
+#include  <iostream>
+
+using namespace std;
+
+main ()
+{
+     int numeros[10];
+     int suma = 0, resta = 0, multi = 1;
+     float divi =1;
+     
+     for (int i = 0; i < 10; i ++)
+     { cout<<i+1<<" Ingrese un numero: ";
+       cin>>numeros[i];
+       
+       suma = suma + numeros[i];
+       resta = resta - numeros[i];
+       multi = multi * numeros[i];
+       divi = divi / numeros[i];
+     }
+
+     
+     cout<< "La suma es: "<<suma<<endl;
+     cout<< "La resta es: "<<resta<<endl;
+     cout<< "La multiplicación es: "<<multi<<endl;
+     cout<< "La división es: "<<divi<<endl;
+     
+     system("pause");
+}
+     
+
+
+2.
+#include  <iostream>
+
+using namespace std;
+
+main ()
+{
+     int numeros[10];
+     int media = 0;
+     
+     for (int i = 0; i < 10; i ++)
+     { cout<<i+1<<" Ingrese un numero: ";
+       cin>>numeros[i];
+       
+       media = media + numeros[i];
+     }
+     
+     cout<< "La media es: "<<media/10<<endl;
+     
+     system("pause");
+}
+
+
+3.
+#include  <iostream>
+
+using namespace std;
+
+main ()
+{
+     int numeros[10];
+     int valor, i=0,  def=0, reg=0, bue=0, exc=0 ;
+     
+     while (i < 10){
+         cout<<" Ingrese la nota #"<<i+1<<" entre 0 y 20: ";
+         cin>>valor;
+         
+         if (valor >= 0 && valor <= 20){
+            numeros[i] = valor;
+            i=i+1;
+            
+            if (valor >= 0 && valor <= 5){
+               def = def + 1;
+            }
+            if (valor >= 6 && valor <= 10){
+               reg = reg + 1;
+            }
+            if (valor >= 11 && valor <= 15){
+               bue = bue + 1;
+            }
+            if (valor >= 16 && valor <= 20){
+               exc = exc + 1;
+            }
+            
+            
+         }else{
+               cout<<" Ingrese la nota #"<<i+1<<" entre 0 y 20: ";
+         }
+                  
+     }
+     
+     cout<<"Estudiantes con nota deficiente: "<<def<<endl;
+     cout<<"Estudiantes con nota regular: "<<reg<<endl;
+     cout<<"Estudiantes con nota buena: "<<bue<<endl;
+     cout<<"Estudiantes con nota excelente: "<<exc<<endl;    
+     
+       
+     system("pause");
+}
